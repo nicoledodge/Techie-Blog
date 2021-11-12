@@ -1,0 +1,10 @@
+<h1>Your Dashboard</h1>
+
+<section class="justify-content-center">
+    {{#each posts as |post|}}
+        {{> post-overview}}
+    {{/each}}
+</section>
+
+<a href="./views/postform">add post</a>
+<!--<script src="./public/js/dashboard.js"></script>-->
