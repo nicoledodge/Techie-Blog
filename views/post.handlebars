@@ -1,0 +1,26 @@
+<section>
+    <div class="card col-6 no-padding">
+        <div class="card-header">
+            <h3>{{post.title}}</h3>
+            <p>Posted by {{post.user.username}} on {{format_time post.createdAt}}</p>
+        </div>
+        <div class="card-body fs-4">
+            {{post.content}}
+        </div>
+    </div>
+</section>
+
+
+
+{{#each comments as |comment|}}
+    <section class="justify-content-center">
+        {{>comment}}
+    </section>
+{{/each}}
+
+<section class= "card col-4">
+    <textarea id="newComment" data-id="{{post.id}}"></textarea>
+    <button id="commentBtn">New comment</button>
+</section>
+
+<script src="/js/comment.js"></script>
