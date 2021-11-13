@@ -10,12 +10,12 @@ Comment.init({
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            autoIncrement: true,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         content: {
-            type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            type: DataTypes.STRING
         },
         post_id: {
             type: DataTypes.INTEGER,

@@ -15,8 +15,8 @@ User.init({
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
+        autoIncrement: true,
+        primaryKey: true
     },
     username: {
         type: DataTypes.STRING,
@@ -24,8 +24,8 @@ User.init({
         unique: true
     },
     password: {
-        type: DataTypes.STRING,
         allowNull: false,
+        type: DataTypes.STRING,
         validate: {
             len: [8]
         }
@@ -44,9 +44,9 @@ User.init({
 
     },
     sequelize,
+    underscored: true,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,
     modelName: 'user'
 })
 
