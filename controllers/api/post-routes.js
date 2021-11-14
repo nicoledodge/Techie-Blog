@@ -4,22 +4,24 @@ const { Post } = require('../../models');
 router.post('/', async (req, res) => {
     try{
         const newPost = await Post.create({
-            title: req.body.title,
-            content: req.body.content,
+            title: req.body.postTitle,
+            content: req.body.postContent,
             user_id: req.session.user_id
         });
         res.status(200).json(newPost);
     }
     catch(error) {
+        console.log(error);
         res.status(500).json(error);
     }
 
 });
+//update post
 router.put('/:id', async (req, res) => {
     try{
         console.log('post put route');
         console.log(req.body);
-        const updatedPost = await Post.update({title: req.body.title, content: req.body.content}, {
+        const updatedPost = await Post.update({title: req.body.postTitle, content: req.body.postContent}, {
             where: {
                 id: req.params.id
             }

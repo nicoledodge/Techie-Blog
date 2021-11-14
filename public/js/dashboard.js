@@ -6,12 +6,15 @@ async function updatePost(event) {
     const postTitle = document.querySelector('#postTitle').value.trim();
     const postContent = document.querySelector('#postContent').value.trim();
     console.log(postTitle, postContent);
+
     if(postTitle && postContent) {
+
         const response = await fetch(`/api/post/${postId}`,{
             method: 'PUT',
             body: JSON.stringify({title: postTitle, content: postContent}),
             headers: {'Content-Type': 'application/json'}
         });
+
         if(response.ok){
             document.location.reload();
         }else {

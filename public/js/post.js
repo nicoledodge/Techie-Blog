@@ -1,11 +1,11 @@
 async function addPost() {
     const postTitle = document.querySelector('#post-title').value.trim();
-    const postText = document.querySelector('#post-content').value.trim();
+    const postContent = document.querySelector('#post-content').value.trim();
 
-    if(postTitle && postText){
+    if(postTitle && postContent){
         const response = await fetch('/api/post',{
             method: 'POST',
-            body: JSON.stringify({postTitle, postText}),
+            body: JSON.stringify({postTitle, postContent}),
             headers: {'Content-Type': 'application/json'}
         });
         if(response.ok){
