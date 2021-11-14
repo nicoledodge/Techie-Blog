@@ -21,7 +21,7 @@ router.put('/:id', async (req, res) => {
     try{
         console.log('post put route');
         console.log(req.body);
-        const updatedPost = await Post.update({title: req.body.postTitle, content: req.body.postContent}, {
+        const updatedPost = await Post.update({title: req.body.title, content: req.body.content}, {
             where: {
                 id: req.params.id
             }
@@ -32,8 +32,10 @@ router.put('/:id', async (req, res) => {
         res.status(500).json(error);
     }
 });
+
 router.delete('/:id', async (req, res) => {
     try{
+        // console.log(req);
         const deletedPost = await Post.destroy({
             where: {
                 id: req.params.id
