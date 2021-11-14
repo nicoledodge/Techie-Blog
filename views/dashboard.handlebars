@@ -2,9 +2,30 @@
 
 <section class="justify-content-center">
     {{#each posts as |post|}}
-        {{> post-overview}}
+        <section>
+            <div class="card col-6 no-padding" >
+                <a href="/post/{{id}}" class="text-decoration-none">
+                    <div class="card-header">
+                        <h3>{{title}}</h3>
+                        <p>Posted by {{user.username}} on {{format_time createdAt}}</p>
+                    </div>
+                    <div class="card-body">
+                        <p>{{content}}</p>
+                    </div>
+                </a>
+                <div class="card justify-content-center" data-id={{id}}>
+                    <label for="post-title">Post Title:</label>
+                    <input type="text" id="postTitle">
+                    <label for="post-content">Post Content:</label>
+                    <textarea id="postContent"></textarea>
+                    <button class="updatePost">update post</button>
+                    <button class="deletePost">delete post</button>
+                </div>
+
+            </div>
+        </section>
     {{/each}}
 </section>
 
-<!--<a href="./views/postform">add post</a>-->
+<a href="./views/postform">add post</a>
 <script src="/js/dashboard.js"></script>
