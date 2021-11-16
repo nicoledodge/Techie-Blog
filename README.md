@@ -2,7 +2,9 @@
 Handlebars.
 
 ##  Demo
-![Demo]()
+#### Products Demo
+![Products Demo]()  
+[Link to Video Walk-Through]()
 
 ## Licenses
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
