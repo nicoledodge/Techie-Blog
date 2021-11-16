@@ -3,8 +3,8 @@ Handlebars.
 
 ##  Demo
 #### Products Demo
-![Products Demo]()  
-[Link to Video Walk-Through]()
+![Products Demo](https://github.com/nicoledodge/Techie-Blog/blob/main/public/assets/tech%20blog%20demo.gif?raw=true)  
+[Link to Video Walk-Through](https://drive.google.com/file/d/1V1kBbZntQj3r8PSAeS-tIZs5Tg8QBryk/view)
 
 ## Licenses
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
